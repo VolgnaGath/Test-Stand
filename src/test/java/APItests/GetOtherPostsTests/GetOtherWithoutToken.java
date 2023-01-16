@@ -1,6 +1,8 @@
 package APItests.GetOtherPostsTests;
 
 import APItests.TestClass;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.http.Method;
 import io.restassured.path.json.JsonPath;
 import org.junit.jupiter.api.DisplayName;
@@ -13,6 +15,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class GetOtherWithoutToken extends TestClass {
     @Test
     @DisplayName("Get запрос чужих постов без токена")
+    @Severity(SeverityLevel.BLOCKER)
     void getOtherWithoutToken() {
         JsonPath response = given()
                 .queryParam("owner", "notMe")

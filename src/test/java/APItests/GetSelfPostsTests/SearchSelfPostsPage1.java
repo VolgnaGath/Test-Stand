@@ -2,6 +2,8 @@ package APItests.GetSelfPostsTests;
 
 import APItests.SearchResponse;
 import APItests.TestClass;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.http.Method;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -16,6 +18,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class SearchSelfPostsPage1 extends TestClass {
     @Test
     @DisplayName("Get запрос с выводом своих постов в порядке возрастания, страница 1")
+    @Severity(SeverityLevel.MINOR)
     void getSelfPostsPage1() {
         List<SearchResponse> searchResponses = Arrays.asList(given()
                 .queryParam("sort", "createdAt")

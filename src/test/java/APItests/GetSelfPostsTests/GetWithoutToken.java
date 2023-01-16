@@ -1,6 +1,8 @@
 package APItests.GetSelfPostsTests;
 
 import APItests.TestClass;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.http.Method;
 import io.restassured.path.json.JsonPath;
 import org.junit.jupiter.api.DisplayName;
@@ -13,6 +15,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class GetWithoutToken extends TestClass {
     @Test
     @DisplayName("Get запрос на вывод своих постов без токена")
+    @Severity(SeverityLevel.BLOCKER)
     void getWithoutToken() {
         JsonPath response = given()
                 .queryParam("sort", "createdAt")

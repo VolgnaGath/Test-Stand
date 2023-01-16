@@ -59,7 +59,7 @@ public class MainPageTests {
     }
     @Test
     @DisplayName("Проверка наличия атрибутов")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.NORMAL)
     @Attachment(value = "Page screenshot", type = "image/png")
     void checkPostAttributes() {
         try {
@@ -79,7 +79,7 @@ public class MainPageTests {
     }
     @Test
     @DisplayName("Проверка кнопок следующая/предыдущая страницы")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.MINOR)
     @Attachment(value = "Page screenshot", type = "image/png")
     void nextPreviousPageTest() {
         try {

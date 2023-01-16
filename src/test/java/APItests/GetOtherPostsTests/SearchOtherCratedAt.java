@@ -2,6 +2,8 @@ package APItests.GetOtherPostsTests;
 
 import APItests.SearchResponse;
 import APItests.TestClass;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.http.Method;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -16,6 +18,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class SearchOtherCratedAt extends TestClass {
     @Test
     @DisplayName("Get запрос чужих постов, сортировка по дате")
+    @Severity(SeverityLevel.MINOR)
     void getOtherCratedAt() {
         given()
                 .queryParam("owner", "notMe")

@@ -1,5 +1,7 @@
 package APItests.LoginTests;
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.http.Method;
 import io.restassured.path.json.JsonPath;
 import org.junit.jupiter.api.DisplayName;
@@ -12,6 +14,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class EmptyLogin extends LoginTestClass{
     @Test
     @DisplayName("Post для входа с пустым логином")
+    @Severity(SeverityLevel.BLOCKER)
     void emptyLogin() {
         JsonPath response = given()
                 .formParam("username", " ")
